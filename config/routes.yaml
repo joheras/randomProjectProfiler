@@ -1,0 +1,17 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+random:
+    path:     /random/{limit}
+    controller: App\Controller\RandomController::random 
+    
+random2:
+    path:     /random2/{n1}-{n2}
+    controller: App\Controller\RandomController::random2 
+    defaults:
+        n1: 1
+        n2: 1000
+    requirements:
+        n1: '\d+'
+        n2: '\d+'
