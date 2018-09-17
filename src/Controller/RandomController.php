@@ -7,6 +7,7 @@ class RandomController {
     
 	public function random($limit){
     	   $num = rand(1,$limit);
+           sleep(2);
     	   return new Response('<html><body>Number: '. $num . '</body></html>');
 	}
 	
